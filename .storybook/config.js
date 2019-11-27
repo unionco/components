@@ -17,7 +17,7 @@ addDecorator(withKnobs);
 addDecorator(withA11y);
 
 // automatically import all files ending in *.stories.js
-const req = require.context('../src/components', true, /\.stories\.jsx$/);
+const req = require.context('../src/components', true, /\.stories\.js$/);
 function loadStories() {
   req.keys().forEach(filename => req(filename));
 }

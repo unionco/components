@@ -482,7 +482,7 @@ declare module '@union/components/src/components/SubNav' {
   import { SubNav } from '@union/components'
   export default SubNav
 }
-declare module '@union/components/src/components/theme' {
+declare module '@union/components/src/theme' {
   import { theme } from '@union/components'
   export default theme
 }
