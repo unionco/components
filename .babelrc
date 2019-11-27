@@ -1,0 +1,23 @@
+{
+  "presets": [
+    [
+      "@babel/preset-react",
+      {
+        "modules": false
+      }
+    ],
+    [
+      "@babel/preset-env",
+      {
+        "modules": false
+      }
+    ],
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    "macros",
+    "add-react-displayname",
+    "babel-plugin-styled-components",
+    "@babel/plugin-proposal-object-rest-spread"
+  ]
+}
