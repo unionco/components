@@ -1,13 +1,13 @@
 import React from 'react';
 import theme from '../../theme';
-import Box from './styles';
+import StyledBox from './styles';
 import { BoxProps } from './types';
 
 // React Component
-const NeoBox = (props: BoxProps) => <Box {...props} />;
+const Box = (props: BoxProps) => <StyledBox {...props} />;
 
-NeoBox.defaultProps = {
+Box.defaultProps = {
   theme
 }
 
-export default NeoBox;
+export default Box;

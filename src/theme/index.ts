@@ -1,6 +1,6 @@
 import { colors } from './colors';
 import { fonts, fontSizes, fontWeights } from './typography';
-import { get } from 'lodash';
+import get from 'lodash/get';
 
 // color variant helper
 const colorThemeNames = ['primary', 'secondary', 'tertiary', 'success', 'warning', 'danger', 'dark', 'medium', 'light'];
@@ -39,3 +39,4 @@ const theme = {
 };
 
 export default theme;
+export { colors, theme, fonts, fontSizes, fontWeights };
