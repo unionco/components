@@ -16,7 +16,7 @@ Each component follows the folder structure below:
     - index.tsx
     - index.stories.tsx
     - styles.ts
-    - types.d.ts
+    - types.ts
     - variants.ts
 
 ### Index.tsx
@@ -28,7 +28,7 @@ Showcase of component for storybook
 ### Styles.ts
 Exports a styled component consumed by the react component
 
-### Types.d.ts
+### Types.ts
 Declares any custom types required for this component
 
 ### Variants.ts
