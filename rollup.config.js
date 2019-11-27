@@ -1,30 +1,18 @@
 import babel from 'rollup-plugin-babel';
 import commonjs from "rollup-plugin-commonjs";
-import resolve from "rollup-plugin-node-resolve";
+
+const formats = ['esm', 'umd'] // 'cjs' ?
+const plugins = [babel({ exclude: 'node_modules/**' }), commonjs()]
 
 export default [
   {
-    input: 'dist-transpiled/index.js',
-    plugins: [
-      babel({
-        exclude: "node_modules/**"
-      }),
-      resolve(),
-      commonjs()
-    ],
+    input: 'src/index.js',
+    plugins,
     external: ['styled-components', 'react'],
-    output: [
-      {
-        file: 'dist/index.esm.js',
-        format: 'es',
-        sourcemap: true
-      },
-      {
-        file: 'dist/index.js',
-        format: 'commonjs',
-        preferConst: true,
-        sourcemap: true
-      }
-    ],
+    output: formats.map(format => ({
+      file: `dist/index.${format}.js`,
+      format,
+      name: 'union'
+    }))
   }
 ]

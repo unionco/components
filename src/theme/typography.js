@@ -11,8 +11,15 @@ const fontWeights = {
   bold: 600
 };
 
+const lineHeights = {
+  condensedUltra: 1,
+  condensed: 1.25,
+  default: 1.5
+};
+
 export {
   fonts,
   fontSizes,
-  fontWeights
+  fontWeights,
+  lineHeights
 };

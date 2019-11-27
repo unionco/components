@@ -11,13 +11,30 @@
       {
         "modules": false
       }
-    ],
-    "@babel/preset-typescript"
+    ]
   ],
   "plugins": [
     "macros",
     "add-react-displayname",
     "babel-plugin-styled-components",
     "@babel/plugin-proposal-object-rest-spread"
-  ]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "@babel/preset-react",
+          {
+            "modules": "commonjs"
+          }
+        ],
+        [
+          "@babel/preset-env",
+          {
+            "modules": "commonjs"
+          }
+        ]
+      ]
+    }
+  }
 }

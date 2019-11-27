@@ -1,5 +1,4 @@
-
-export const colors: { [key: string]: string | string[] | { [key: string]: string } } = {
+export const colors = {
   white: '#FFFFFF',
   black: '#000000',
   primary: {

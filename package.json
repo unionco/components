@@ -9,50 +9,45 @@
   "author": "",
   "license": "MIT",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/index.umd.js",
   "module": "dist/index.esm.js",
-  "typings": "dist/types/index.d.ts",
+  "typings": "index.d.ts",
   "files": [
-    "dist/"
+    "dist",
+    "src",
+    "index.d.ts",
+    "!src/__tests__",
+    "!src/utils"
   ],
   "scripts": {
-    "dev": "concurrently \"yarn compile\" \"yarn build\" \"yarn storybook\"",
-    "build": "rollup -c",
-    "compile": "yarn tsc",
-    "tsc": "tsc -p .",
+    "dev": "concurrently \"yarn build:dev\" \"yarn storybook\"",
+    "build:dev": "NODE_ENV=devlopment rollup -c",
+    "build:prod": "NODE_ENV=production rollup -c",
     "storybook": "start-storybook --port 9001"
   },
   "dependencies": {
     "@styled-system/prop-types": "^5.1.2",
     "@styled-system/theme-get": "^5.1.2",
-    "@types/lodash": "^4.14.149",
-    "@types/node": "^12.12.14",
-    "@types/react": "^16.9.13",
-    "@types/react-dom": "^16.9.4",
-    "@types/styled-components": "4.1.8",
     "@types/styled-system": "^5.1.4",
+    "babel-plugin-macros": "2.6.1",
     "lodash": "^4.17.15",
-    "styled-components": "^4.4.1",
-    "styled-system": "^5.1.2",
-    "tslib": "*"
+    "styled-system": "^5.1.2"
   },
   "peerDependencies": {
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "styled-components": "4.x"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-react": "^7.7.4",
-    "@babel/preset-typescript": "^7.7.4",
     "@storybook/addon-a11y": "^5.2.6",
     "@storybook/addon-knobs": "^5.2.6",
     "@storybook/addon-viewport": "^5.2.6",
     "@storybook/react": "^5.2.6",
     "babel-loader": "^8.0.6",
     "babel-plugin-add-react-displayname": "^0.0.5",
-    "babel-plugin-macros": "^2.7.1",
     "babel-plugin-styled-components": "^1.10.6",
     "concurrently": "^5.0.0",
     "react": "^16.12.0",
@@ -61,8 +56,7 @@
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "ts-loader": "^6.2.1",
-    "typescript": "^3.7.2",
+    "styled-components": "^4.4.1",
     "webpack": "^4.41.2"
   }
 }
