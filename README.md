@@ -13,23 +13,19 @@ Simply run the commands below and you _should_ have a working storybook displayi
 Each component follows the folder structure below:
 
 - ComponentName
-    - index.tsx
-    - index.stories.tsx
-    - styles.ts
-    - types.ts
-    - variants.ts
+    - index.js
+    - index.stories.js
+    - styles.js
+    - variants.js
 
-### Index.tsx
+### Index.js
 Exports react component to be consumed
 
-### Stories.tsx
+### Stories.js
 Showcase of component for storybook
 
-### Styles.ts
+### Styles.js
 Exports a styled component consumed by the react component
 
-### Types.ts
-Declares any custom types required for this component
-
-### Variants.ts
+### Variants.js
 Exports custom variants required for this component
