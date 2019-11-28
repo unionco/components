@@ -283,6 +283,28 @@ declare module '@union/components' {
   }
 
   export const ProgressBar: React.FunctionComponent<ProgressBarProps>
+
+  export interface AccordionProps
+    extends BaseProps {
+      trigger: any;
+      panel: any;
+      open?: boolean;
+    }
+
+  export interface AccordionTriggerProps
+    extends BaseProps,
+    CommonProps,
+    LayoutProps {
+    start?: any;
+    end?: any;
+  }
+
+  export interface AccordionPanelProps
+    extends BaseProps,
+    CommonProps,
+    LayoutProps { }
+
+  export const AccordionPanel: React.FunctionComponent<AccordionPanelProps>
 }
 
 declare module '@union/components/src/components/Accordion' {
