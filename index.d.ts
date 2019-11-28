@@ -78,37 +78,18 @@ declare module '@union/components' {
 
   export const Heading: React.FunctionComponent<HeadingProps>
 
-  type DetailsRenderFunction = (args: { open: boolean }) => React.ReactElement
-
-  export interface DetailsProps extends CommonProps, Omit<React.DetailsHTMLAttributes<HTMLDetailsElement>, 'color'> {
-    render?: DetailsRenderFunction
-    children?: DetailsRenderFunction | React.ReactNode
-    defaultOpen?: boolean
-    overlay?: boolean
-  }
-
-  export const Details: React.FunctionComponent<DetailsProps>
-
   export interface ButtonProps
     extends BaseProps,
     CommonProps,
     StyledSystem.FontSizeProps,
     Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'color'> {
-    variant?: 'small' | 'medium' | 'large'
+    variant?: string,
+    size?: 'small' | 'medium' | 'large',
+    fill?: 'solid' | 'outline' | 'clear'
   }
 
-  export const ButtonPrimary: React.FunctionComponent<ButtonProps>
-  export const ButtonOutline: React.FunctionComponent<ButtonProps>
-  export const ButtonDanger: React.FunctionComponent<ButtonProps>
   export const ButtonGroup: React.FunctionComponent<BoxProps>
   export const Button: React.FunctionComponent<ButtonProps>
-
-  export interface AvatarProps extends CommonProps, Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'color'> {
-    isChild?: boolean
-    size?: number
-  }
-
-  export const Avatar: React.FunctionComponent<AvatarProps>
 
   export interface BaseStylesProps extends TypographyProps, CommonProps { }
 
@@ -122,32 +103,6 @@ declare module '@union/components' {
   }
 
   export const BorderBox: React.FunctionComponent<BorderBoxProps>
-
-  export interface BranchNameProps extends CommonProps, Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'color'> { }
-
-  export const BranchName: React.FunctionComponent<BranchNameProps>
-
-  export interface CircleBadgeProps extends CommonProps, Omit<React.HTMLAttributes<HTMLDivElement>, 'color'> {
-    inline?: boolean
-    size?: number
-    variant?: 'small' | 'medium' | 'large'
-  }
-
-  export const CircleBadge: React.FunctionComponent<CircleBadgeProps>
-
-  export interface CircleOcticonProps extends CommonProps, FlexProps {
-    size?: number
-    icon: React.ReactNode
-  }
-
-  export const CircleOcticon: React.FunctionComponent<CircleOcticonProps>
-
-  export interface StyledOcticonProps extends CommonProps {
-    size?: number
-    icon: React.ReactNode
-  }
-
-  export const StyledOcticon: React.FunctionComponent<StyledOcticonProps>
 
   export interface DropdownProps extends CommonProps, ButtonProps { }
 
@@ -330,9 +285,34 @@ declare module '@union/components' {
   export const ProgressBar: React.FunctionComponent<ProgressBarProps>
 }
 
+declare module '@union/components/src/components/Accordion' {
+  import Accordion from '@union/components'
+  export default Accordion;
+}
+
+declare module '@union/components/src/components/AccordionTrigger' {
+  import { AccordionTrigger } from '@union/components'
+  export default AccordionTrigger;
+}
+
+declare module '@union/components/src/components/AccordionPanel' {
+  import { AccordionPanel } from '@union/components'
+  export default AccordionPanel;
+}
+
 declare module '@union/components/src/components/Box' {
   import { Box } from '@union/components'
   export default Box
+}
+
+declare module '@union/components/src/components/GalleryGrid' {
+  import { GalleryGrid } from '@union/components'
+  export default GalleryGrid;
+}
+
+declare module '@union/components/src/components/GalleryGridItem' {
+  import { GalleryGridItem } from '@union/components'
+  export default GalleryGridItem;
 }
 
 declare module '@union/components/src/components/Text' {
@@ -343,21 +323,6 @@ declare module '@union/components/src/components/Text' {
 declare module '@union/components/src/components/Heading' {
   import { Heading } from '@union/components'
   export default Heading
-}
-
-declare module '@union/components/src/components/ButtonDanger' {
-  import { ButtonDanger } from '@union/components'
-  export default ButtonDanger
-}
-
-declare module '@union/components/src/components/ButtonPrimary' {
-  import { ButtonPrimary } from '@union/components'
-  export default ButtonPrimary
-}
-
-declare module '@union/components/src/components/ButtonOutline' {
-  import { ButtonOutline } from '@union/components'
-  export default ButtonOutline
 }
 
 declare module '@union/components/src/components/ButtonGroup' {
